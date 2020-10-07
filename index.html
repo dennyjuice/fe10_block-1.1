@@ -15,25 +15,47 @@
             <h1>Get iintoo it today</h1>
             <h3>There is no charge or obligation upon registration.</h3>
             <div class="social-buttons">
-                <button class="social-button__facebook"><i class="icon icon-facebook"></i>Register with facebook</button>
-                <button class="social-button__linkedin"><i class="icon icon-linkedin"></i>Register with Linkedin</button>
+                <button class="social-button__facebook"><span>Register with Facebook</span></button>
+                <button class="social-button__linkedin"><span>Register with Linkedin</span></button>
             </div>
-            <div class="separator">or</div>
-            <form action="">
-                <label><input type="email" name="email" id="email">Email</label>
-                <label><input type="number" name="phone" id="phone">Phone</label>
+            <div class="separator"><span>or</span></div>
+            <form action="#">
+                <div class="form-inputs">
+                    <div class="email-input">
+                        <input type="email" name="email" class="input-box" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="phone-input">
+                        <input type="number" name="phone" class="input-box" id="phone" required>
+                        <label for="phone">Phone</label>
+                    </div>
+                    
+                </div>
+                
                 <h2>What type of investor are you?</h2>
                 <h4>Select the type of investor are you.</h4>
-                <p><input type="radio" name="investor" id="individual"> Individual <span class="info">i</span>
-                <input type="radio" name="investor" id="business"> Business <span class="info">i</span>
-                <input type="radio" name="investor" id="ira"> IRA <span class="info">i</span>
-                <input type="radio" name="investor" id="trust"> Trust <span class="info">i</span></p>
-                <div class="info-box__individual">I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.</div>
-                <div class="info-box__business">I am a Company investing on my own behalf as a sole owner, joint tenant, or tenant in common</div>
-                <div class="info-box__ira">I am a IRA investing on my own behalf as a sole owner, joint tenant, or tenant in common</div>
-                <div class="info-box__trust">I am a Trust investing on my own behalf as a sole owner, joint tenant, or tenant in common</div>
-                <p><input type="checkbox" name="" id=""> I agree to the terms and receiving notifications fromm iintoo <a href="#" class="terms">View full terms</a></p>
-                <button type="submit">Create account</button>
+                <div class="radio-container">
+                    <div class="type-radio">
+                        <input type="radio" name="investor" value="individual" id="individual" checked><label for="individual">Individual</label>
+                    </div>
+                    <div class="type-radio">
+                        <input type="radio" name="investor" value="business" id="business"><label for="business">Business</label>
+                    </div>
+                    <div class="type-radio">    
+                        <input type="radio" name="investor" value="ira" id="ira"><label for="ira">IRA</label>
+                    </div>
+                    <div class="type-radio">    
+                        <input type="radio" name="investor" value="trust" id="trust"><label for="trust">Trust</label>
+                    </div>
+                </div>
+                
+                <div class="info-box">I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.</div>
+                
+                <div class="terms-checkbox">
+                    <input type="checkbox" name="terms" id="terms">
+                    <label for="terms">I agree to the terms and receiving notifications fromm iintoo <a href="#" class="terms">View full terms</a></label>
+                </div>
+                <button type="submit" class="create">Create account</button>
             </form>
         </div>
     </div>

@@ -16,25 +16,45 @@
 body {
     font-family: 'Barlow';
     background-color:#EFF6FF;
-    font-size: 14px;
+    font-size: 16px;
+    color: #2A4A5C;
+    display: flex;
+    height: 100vh;
 }
 
 h3, h4 {
     font-weight: normal;
 }
 
+button {
+    border: none;
+    font-family: 'Barlow';
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .9;
+}
+
 .container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1440px;
     max-height: 1000px;
+    margin: auto;
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow:    0px 5px 30px 0px rgba(50, 50, 50, 0.1);
+    box-shadow:         0px 5px 30px 0px rgba(50, 50, 50, 0.1);
 }
 
 .image-block {
-    background: url(../img/bg.jpg);
+    background: url(../img/bg.jpg) center center no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
-    max-height: 500px;
+    height: 100px;
+    max-height: 1000px;
 }
 
 .logo {
@@ -45,7 +65,344 @@ h3, h4 {
 .form-container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
     background-color: #fff;
     padding: 1em;
-    height: 100vh;
+}
+
+.form-container h1 {
+    margin-bottom: 0.5em;
+}
+.form-container h3,
+.form-container h4 {
+    margin-bottom: 2em;
+}
+.form-container h2 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.social-button__facebook,
+.social-button__linkedin {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+
+.social-button__facebook {
+    margin-bottom: 1em;
+}
+
+.social-button__facebook span,
+.social-button__linkedin span {
+    width: 100%;
+}
+
+.social-button__facebook:before,
+.social-button__linkedin:before {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    margin-left: 0.5em;
+}
+
+.social-button__facebook {
+    background-color: #255A9B;
+}
+.social-button__facebook:before {
+    background: url(../img/facebook.svg) no-repeat;
+    background-size: contain;
+}
+.social-button__linkedin {
+    background-color: #0076B6;
+}
+.social-button__linkedin:before {
+    background: url(../img/linkedin.svg) no-repeat;
+    background-size: contain;
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.separator span {
+    margin: 0 0.5em 0 0.5em;
+}
+
+.separator:before,
+.separator:after {
+    content: ' ';
+    display: inline-block;
+    width: 30%;
+    height: 1px;
+    background-color: #eee;
+}
+
+.email-input,
+.phone-input {
+    width: 100%;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-inputs .input-box {
+	outline: none;
+	width:100%;
+	height:55px;
+	padding-left:8px;
+	padding-top:20px;
+    border:1px solid #eee;
+    font-size: 1.2em;
+}
+.form-inputs label[for="email"],
+.form-inputs label[for="phone"] {
+    cursor:text;
+	position: relative;
+    left: 8px;
+    top: -48px;
+    font-size: 0.9em;
+    color: #96A5B1;
+}
+
+.form-inputs .input-box:focus {
+  border-left: 1px solid #3698FB;
+}
+
+form input[name="investor"] {
+    display: none;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.type-radio {
+    margin-right: 20px;
+}
+
+.type-radio label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 25px;
+    margin-right: 0;
+    font-weight: bold;
+    user-select: none;
+    margin-bottom: 1em;
+}
+.type-radio label:before {
+	content: "";
+    display: inline-block;
+    border: 2px solid #eee;
+    border-radius: 100%;
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+.type-radio input[type=radio]:checked + label:before {
+	border: 4px solid #3698FB;
+}
+.type-radio label:after {
+    width: 10px;
+    content: "i";
+    display: inline-block;
+    border: 1px solid #AFAFAF;
+    border-radius: 100%;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: -15px;
+    bottom: 2px;
+    box-sizing: border-box;
+    font-size: 0.5em;
+    text-align: center;
+}
+.type-radio label[for="trust"] {
+    margin-bottom: 1.5em;
+}
+
+.info-box{
+    width: 100%;
+    border-radius: 5px;
+    padding: 1em;
+    color: #7B8A92;
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow:    0px 5px 30px 0px rgba(50, 50, 50, 0.1);
+    box-shadow:         0px 5px 30px 0px rgba(50, 50, 50, 0.1);
+    margin-bottom: 2em;
+}
+
+.terms-checkbox {
+    display: flex;
+}
+.terms-checkbox input[type="checkbox"] {
+    opacity: .5;
+    margin-right: 0.5em;
+}
+.terms-checkbox label {
+    color: #7B8A92;
+}
+.terms-checkbox label a {
+    color: #3698FB;
+}
+
+button.create {
+    margin-top: 2em;
+    height: 40px;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3698FB;
+    border-radius: 5px;
+}
+
+@media (min-width:600px) {
+    .social-buttons {
+        flex-direction: row;
+    }
+    .social-button__facebook {
+        margin-right: 1em;
+        margin-bottom: 0;
+    }
+    .form-inputs {
+        flex-direction: row;
+    }
+    .email-input {
+        margin-right: 1em;
+    }
+    .radio-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .info-box {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+}
+
+@media (min-width:801px) {
+    .container {
+        flex-direction: row;
+        height: 100vh;
+    }
+    .image-block {
+        width: 50%;
+        height: 100vh;
+    }
+    .logo {
+        width: 20vw;
+    }
+    .form-container {
+        width: 50%;
+        overflow: auto;
+    }
+    .social-buttons {
+        flex-direction: column;
+    }
+    .social-button__facebook {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+    .form-inputs {
+        flex-direction: column;
+    }
+    .email-input {
+        margin-right: 0;
+    }
+    .radio-container {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width:1025px) {
+    .form-container {
+        justify-content: center;
+    }
+    .social-buttons {
+        flex-direction: row;
+    }
+    .social-button__facebook {
+        margin-right: 1em;
+        margin-bottom: 0;
+    }
+    .form-inputs {
+        flex-direction: row;
+    }
+    .email-input {
+        margin-right: 1em;
+    }
+    .radio-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    button.create {
+        width: 50%;
+    }
+}
+
+@media (min-width:1281px) {
+    .form-container {
+        width: 47%;
+        padding: 5em;
+    }
+    .image-block {
+        width: 53%;
+    }
+    .logo {
+        width: 6vw;
+        margin: 3em;
+    }
+    .form-container h1 {
+        margin-bottom: 1em;
+    }
+    .form-container h3,
+    .form-container h4 {
+        margin-bottom: 3em;
+    }
+    .form-container h2 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+    .separator {
+        margin-bottom: 3em;
+    }
+    .social-buttons {
+        margin-bottom: 3em;
+    }
+    .radio-container {
+        justify-content: space-between;
+    }
+    .info-box {
+        width: 60%;
+        margin: 0;
+        margin-bottom: 2em;
+    }
+    .terms-checkbox label {
+        font-size: 0.8em;
+    }
 }
