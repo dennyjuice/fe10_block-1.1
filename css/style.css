@@ -42,7 +42,7 @@ button:hover {
     flex-direction: column;
     width: 100%;
     max-width: 1440px;
-    max-height: 1000px;
+    max-height: 900px;
     margin: auto;
     -webkit-box-shadow: 0px 5px 30px 0px rgba(50, 50, 50, 0.1);
     -moz-box-shadow:    0px 5px 30px 0px rgba(50, 50, 50, 0.1);
@@ -54,7 +54,7 @@ button:hover {
     background-size: cover;
     width: 100%;
     height: 100px;
-    max-height: 1000px;
+    max-height: 900px;
 }
 
 .logo {
@@ -368,7 +368,7 @@ button.create {
 @media (min-width:1281px) {
     .form-container {
         width: 47%;
-        padding: 5em;
+        padding: 0 5em;
     }
     .image-block {
         width: 53%;
@@ -377,12 +377,9 @@ button.create {
         width: 6vw;
         margin: 3em;
     }
-    .form-container h1 {
-        margin-bottom: 1em;
-    }
     .form-container h3,
     .form-container h4 {
-        margin-bottom: 3em;
+        margin-bottom: 2em;
     }
     .form-container h2 {
         margin-top: 2em;
